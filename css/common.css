@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+html,table,tbody,thead,body,p,a,p,span,div,ul,li,ol,h1,h2,h3,h4,h5,h6,header,nav,details,article,footer,summary,aside,section {
+	line-height: normal;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+p,h1,h2,h3,h4,h5,h6,li,a,span,div,input,select,textarea {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div,li,header,nav,section,footer,summary,aside,span {
+	float: left;
+	overflow: hidden;
+	letter-spacing: normal;
+	list-style: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+	background-color: #FFF;
+	position: relative;
+}
+
+h1 {
+	font-size: 38px;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	position: relative;
+}
+
+br {
+	clear: both;
+}
