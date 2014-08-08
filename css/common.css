@@ -11,6 +11,8 @@ p,h1,h2,h3,h4,h5,h6,li,a,span,div,input,select,textarea {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
 	text-decoration: none;
+	color: black;
+
 }
 
 div,li,header,nav,section,footer,summary,aside,span {
