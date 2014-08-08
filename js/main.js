@@ -64,7 +64,7 @@
 
 								$(this).animate({
 
-									'marginLeft': '-300px'
+									'marginLeft': '-190px'
 
 								},100,function(){	
 
@@ -79,7 +79,7 @@
 									},100,function(){
 
 										var childHeight = $('.active .children').height() + 10;
-										console.log(childHeight);
+										
 										$('.active2').animate({
 
 											'height': childHeight+"px"
@@ -154,10 +154,7 @@
 
 									},200,function(){
 
-										
-
 										$('.navLinksContainer li').removeClass('active');
-
 
 									});
 
