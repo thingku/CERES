@@ -54,9 +54,13 @@
 
 					/*var height = $(this).parent().height() + padTop;*/
 
+					var x = $('.active').index();
+
 					var height = holdliHeight + padTop;
-					
-					$('.navLinksContainer li').not(':first-child').each(function(){
+
+					heightAdjust = (height * x);
+						//.not(':first-child')
+					$('.navLinksContainer li').each(function(){
 
 						if(!$(this).hasClass('active')){
 
@@ -66,34 +70,26 @@
 
 									'marginLeft': '-190px'
 
-								},100,function(){	
+								},200,"linear",function(){	
 
-									var x = $('.active').index() - 1;
-
-									heightAdjust = (height * x);
-									
 									$('.active').animate({
 
 										'marginTop':'-'+heightAdjust+'px'
 
-									},100,function(){
+									},100,"linear",function(){
 
 										var childHeight = $('.active .children').height() + 10;
-										
+
+										$('.active .children').css({"position":"absolute"});
+
 										$('.active2').animate({
 
 											'height': childHeight+"px"
 
-										},300,function(){
+										},400,"linear",function(){
 
-											$('.active .children').show();
-
-											$('.active .children').animate({
-
-												'marginLeft':'0px'
-
-											},200);
-
+											$('.active .children').fadeIn(300,"linear");
+											
 										});
 										
 									});
@@ -114,11 +110,11 @@
 
 		$(document).on("click", ".navBack",function() {
 
-			$('.children').animate({
+			$('.active  .children li').removeClass('activeSub');
+			
+			$('.active .children').fadeOut(300,"linear",function(){
 
-				'marginLeft':'-300px'
-
-			},200,function(){
+				$('.active .children').css({"position":"initial"});
 
 				$('.navBack').attr('src', holdAnchor);
 
@@ -128,17 +124,15 @@
 
 					'height': holdliHeight+"px"
 
-				},200,function(){
+				},300,"linear",function(){
 
 					$('.hasChildren').removeClass('hasChildren');
-
-					$('.children').hide();
 
 					$('.active').animate({
 
 						'marginTop':'0px'
 
-					},200,function(){
+					},200,"linear",function(){
 
 						$('.navLinksContainer li').each(function(){
 
@@ -152,7 +146,7 @@
 
 										'marginLeft': '0px'
 
-									},200,function(){
+									},300,"linear",function(){
 
 										$('.navLinksContainer li').removeClass('active');
 
@@ -163,11 +157,10 @@
 							}
 
 						});
+
 					});
 
-				});
-
-				
+				});	
 
 			});
 

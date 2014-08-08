@@ -64,7 +64,7 @@
 
 .children{
 	display:none;
-	margin-left: -120px;
+	/*margin-left: -120px;*/
 	position: absolute;
 	width: 100%;
 }
