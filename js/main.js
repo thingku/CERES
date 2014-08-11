@@ -287,17 +287,33 @@
 
 	$.fn.sideBar = function() {
 
+		$('body').addClass('normalState');
+
 		$('#leftToggle').click(function(e) {
 
 			e.stopPropagation();
 
-			$('body').removeClass('normalState').addClass('hideSideBar');
+			if ( $('body').hasClass('normalState') ) {
 
-			setTimeout( function() {
+				$('body').removeClass('normalState').addClass('hideSideBar');
 
-				$('body').removeClass('hideSideBar').addClass('activeSideBar');
+				setTimeout( function() {
 
-			},1000 );
+					$('body').removeClass('hideSideBar').addClass('activeSideBar');
+
+				},1000 );
+
+			} else if ( $('body').hasClass('activeSideBar') ) {
+
+				$('body').removeClass('activeSideBar').addClass('hideSideBar2');
+
+				setTimeout( function() {
+
+					$('body').removeClass('hideSideBar2').addClass('normalState');
+
+				},1000 );
+
+			}
 
 		});
 
@@ -307,11 +323,11 @@
 
 				$('body').removeClass('activeSideBar').addClass('hideSideBar2');
 
-			setTimeout( function() {
+				setTimeout( function() {
 
-				$('body').removeClass('hideSideBar2').addClass('normalState');
+					$('body').removeClass('hideSideBar2').addClass('normalState');
 
-			},1000 );				
+				},1000 );				
 
 			} else {
 
