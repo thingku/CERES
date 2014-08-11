@@ -14,15 +14,22 @@
 
 			<div class="leftHolder">
 
-				<div class='logoContainer'>
+				<div class="leftTogglerHolder">
 
-					<div class='menuContainer'>
+					<img src="images/menu-ico.png" id="leftToggle">
 
-						<img src="images/menu-ico.png" class='menuImg'>
+				</div>
 
-					</div>
+				<div class="logoHolder">
 
-					<div class='logoHolder'></div>
+					LOGO
+
+				</div>
+
+				<div class="invertedLogoHolder">
+
+					<p>LOGO</p>
+				
 				</div>
 
 				<div class='navigationContainer'>
@@ -111,24 +118,10 @@
 
 					</nav>
 
-				</div>
+				</div>				
 
 			</div>
 		
-		</div>
-
-		<div class="leftPanelContainer">
-
-			<div class="leftPanelHolder">
-				
-				<div class="panelMenuContainer">
-
-					<img src="images/menu-ico.png" class='menuImg'>
-
-				</div>
-
-			</div>
-
 		</div>
 
 		<div class='rightContainer'>
@@ -167,7 +160,9 @@
 
 		$(document).ready(function(e){
 
-			$().navigationMenu();		
+			$().navigationMenu();	
+
+			$().sideBar();	
 
 		});
 
