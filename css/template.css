@@ -17,7 +17,8 @@
 	position:relative;
 	float: left;
 	height: 100%;
-	width: 84.6%;
+	/*width: 84.6%;*/
+	/*width: 70.7%;*/
 }
 
 .leftHolder{
@@ -360,4 +361,71 @@
 
 .hideSideBar2 .navigationContainer {
 	display: none;
+}
+
+.notificationBarContainer{
+	float:left;
+	background:#4D4D4D;
+	/*width: 200px;*/
+	width: 0px;
+	height: 100%;
+}
+
+.activeNotificationBar{
+	width: 200px;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+.hideNotificationBar{
+	width: 0px;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+
+.adjustWidthNotifNormalState{
+	width: calc(100% - 400px)!important;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+
+}
+
+.adjustWidthNotifActiveSidebar{
+	width: calc(100% - 250px)!important;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+
+}
+
+.adjustWidthNotifNormalStateHide{
+	width: calc(100% - 200px)!important;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+
+}
+
+.adjustWidthNotifActiveSidebarHide{
+	width: calc(100% - 50px)!important;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+
 }
