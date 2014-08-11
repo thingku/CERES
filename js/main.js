@@ -22,7 +22,7 @@
 
   		var heightAdjust = 0;
 
-  		if(cookieVal == "true"){
+			/*  		if(cookieVal == "true"){
 
   			$('.leftPanelContainer').css({
 
@@ -68,7 +68,7 @@
 
   			});
 
-  		}
+  		}*/
 
 		$('.navLinksContainer>li>a').click(function(){
 
@@ -268,5 +268,43 @@
 		});
 
 	}	
+
+	$.fn.sideBar = function() {
+
+		$('#leftToggle').click(function(e) {
+
+			e.stopPropagation();
+
+			$('body').removeClass('normalState').addClass('hideSideBar');
+
+			setTimeout( function() {
+
+				$('body').removeClass('hideSideBar').addClass('activeSideBar');
+
+			},1000 );
+
+		});
+
+		$('.leftHolder').click(function() {
+
+			if ( $('body').hasClass('activeSideBar') ) {
+
+				$('body').removeClass('activeSideBar').addClass('hideSideBar2');
+
+			setTimeout( function() {
+
+				$('body').removeClass('hideSideBar2').addClass('normalState');
+
+			},1000 );				
+
+			} else {
+
+				console.log('y');
+
+			}
+
+		});
+
+	}
 
 })(jQuery);

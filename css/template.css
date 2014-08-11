@@ -1,27 +1,27 @@
 .mainContainer{
-	position: absolute;
+	float: left;
 	width: 100%;
 	height:100%;
-	top:0;
+	overflow: hidden;
 }
 
 .leftContainer{
 	position:relative;
 	float:left;
 	height:100%;
-	/*width: 240px;*/
 	width: 20%;
+	max-width: 200px;
 }
 
 .rightContainer{
 	position:relative;
-	float:left;
-	height:100%;
-	width: 80%;
+	float: left;
+	height: 100%;
+	width: 84.6%;
 }
 
 .leftHolder{
-	position: absolute;
+	position: relative;
 	height:100%;
 	width: 100%;
 	background:#E6E6E6;
@@ -38,7 +38,7 @@
 .navigationContainer{
 	position: relative;
 	float:left;
-	width: 100%;
+	width: 200px;
 }
 
 .navLinksContainer{
@@ -198,4 +198,166 @@
 .panelMenuContainer>img{
 	width:25px;
 	height: 25px;
+}
+
+.leftTogglerHolder {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+
+.leftTogglerHolder img {
+	padding: 10px;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+.logoHolder {
+	width: 200px;
+	float: left;
+	overflow: hidden;
+	background-color: #CCC;
+	height: 70px;
+	text-align: center;
+	color: #444;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 70px;
+}
+
+.invertedLogoHolder  {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	background-color: #CCC;
+	text-align: center;
+	color: #444;
+	font-weight: 700;
+	font-size: 30px;
+	height: 200px;	
+	display: none;
+	position: absolute;
+	bottom: 100px;
+}
+
+.invertedLogoHolder p {
+	margin: 90px 0 0 0;
+	font-weight: 700;
+	color: #444;
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+}
+
+.normalState .leftContainer {
+	width:200px;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;		
+}
+
+.normalState .navigationContainer {
+	display: block;
+}
+
+.normalState .rightContainer {
+	width: 84.6%;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+.hideSideBar .leftContainer {
+	width:0px;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+.activeSideBar .leftTogglerHolder img,
+.hideSideBar2 .leftTogglerHolder img {
+	float: none;
+}
+
+.hideSideBar .invertedLogoHolder {
+	display: none;
+}
+
+.hideSideBar .rightContainer {
+	width: 100%;	
+    overflow:hidden;
+    -webkit-transition: width .9s ease-in-out;
+    -moz-transition: width .9s ease-in-out;
+    -o-transition: width .9s ease-in-out;
+    transition: width .9s ease-in-out;	
+}
+
+.activeSideBar .leftContainer {
+	width:50px;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;		
+}
+
+.activeSideBar .rightContainer {
+	width: 96%;	
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+.activeSideBar .invertedLogoHolder {
+	display: block;
+}
+
+.activeSideBar .navigationContainer {
+	display: none;
+}
+
+.activeSideBar .logoHolder {
+	display: none;
+}
+
+.hideSideBar2 .leftContainer {
+	width:0px;
+    overflow:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+.hideSideBar2 .logoHolder{
+	display: none;
+}
+
+.hideSideBar2 .invertedLogoHolder {
+	display: block;
+}
+
+.hideSideBar2 .rightContainer {
+	width: 100%;	
+    overflow:hidden;
+    -webkit-transition: width .9s ease-in-out;
+    -moz-transition: width .9s ease-in-out;
+    -o-transition: width .9s ease-in-out;
+    transition: width .9s ease-in-out;	
+}
+
+.hideSideBar2 .navigationContainer {
+	display: none;
 }
