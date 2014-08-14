@@ -9,14 +9,17 @@
 	position:relative;
 	float:left;
 	height:100%;
-	width: 20%;
-	max-width: 200px;
+	width: 200px;
+	left:0;
+	max-width: 300px;
 }
 
 .rightContainer{
 	position:relative;
 	float: left;
 	height: 100%;
+	overflow-y: visible;
+	/*width: calc(100% - 250px);*/
 	/*width: 84.6%;*/
 	/*width: 70.7%;*/
 }
@@ -25,7 +28,7 @@
 	position: relative;
 	height:100%;
 	width: 100%;
-	background:#E6E6E6;
+	background:#3B4B5E;
 }
 
 .logoContainer{
@@ -51,9 +54,10 @@
 	width: 100%;
 	float: none;
 	margin-left: 0px;
-	font-size: 16px;
+	font-size: 14px;
 	/*height: 36px;*/
 	padding: 12px 0 12px;
+	/*padding: 12px 0 12px 40px;*/
 }
 
 .navigationContainer>nav>ul.navLinksContainer>li>ul.children>li{	
@@ -68,24 +72,27 @@
 	/*margin-left: -120px;*/
 	position: absolute;
 	width: 100%;
+	background:#1D2D37;
 }
 
 .navigationContainer>nav>ul.navLinksContainer>li>a{
 	font-weight: bold;
-	margin: 12px 0px;
+	/*margin: 12px 0px;*/
+	color:white;
+	margin: 12px 0px 0 40px;
 }
 
 .active{
-	background:#4D4D4D;	
+	background:#4AACAE;	
 	margin:0;
 }
 
 .active2{
-	background:#B3B3B3!important;
+	background:#38777F!important;
 }
 
 .activeSub{
-	background:#4D4D4D;	
+	background:#4AACAE;	
 	margin:0;
 }
 
@@ -104,7 +111,7 @@
 .navigationContainer>nav>ul.navLinksContainer>li>span{
 	width: 40px;
 	height: 100%;
-	margin: 0 10px 0 0;
+	/*margin: 0 10px 0 0;*/
 }
 
 .navigationContainer>nav>ul.navLinksContainer>li>span>img{
@@ -123,6 +130,7 @@
 .children>li>a{
 	text-transform: capitalize;
 	margin: 0 0 0 49px;	
+	color: white;
 }
 
 .active2 a{
@@ -130,9 +138,9 @@
 }
 
 .headerContainer{
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 90px;
+	height: 75px;
 	border-bottom: 2px solid #E6E6E6;
 }
 
@@ -142,12 +150,39 @@
 	height: 100%;
 }
 
-.notifContainer{
-	float:left;
-	width:60px;
-	height: 60px;
-	margin: 15px 0 0 30px;
-	border:1px solid black;
+.notifContainer,.messageContainer,.calendarIconContainer{
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 16px 0 0 30px;
+	border: 1px solid black;
+}
+
+.userIconContainer{
+	float: right;
+	width: 60px;
+	height: 100%;
+	/*margin: 25px 0 0 30px;*/
+}
+
+.userIconContainer>img{
+	float:right;
+	margin: 16px 0 0;
+}
+
+.userNameContainer{
+	float: right;
+	height: 100%;
+	line-height: 66px;
+	margin: 0 20px 0 5px;
+	/*padding: 32px 0 0;	*/
+	/*margin: 25px 0 0 30px;*/
+	/*border: 1px solid black;*/
+}
+
+.drop{
+	margin: 0 0 0 5px;
+	cursor: pointer;
 }
 
 .logoutContainer{
@@ -157,11 +192,18 @@
 	border-left: 2px solid #E6E6E6;
 }
 
+.logoutContainer>img{
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin: 18px 26px 0;
+}
+
 .userContainer{
 	float: right;
 	width: 236px;
-	height: 100%;
-	border:1px solid black;
+	height: 98%;
+	/*border:1px solid black;*/
 }
 
 .menuContainer{
@@ -206,6 +248,7 @@
 	float: left;
 	overflow: hidden;
 	text-align: center;
+	position: absolute;
 }
 
 .leftTogglerHolder img {
@@ -220,13 +263,14 @@
 	width: 200px;
 	float: left;
 	overflow: hidden;
-	background-color: #CCC;
-	height: 70px;
+	
+	/*height: 92px;*/
+	height: 75px;
 	text-align: center;
-	color: #444;
+	color: white;
 	font-weight: 700;
 	font-size: 30px;
-	line-height: 70px;
+	line-height: 75px;
 }
 
 .invertedLogoHolder  {
@@ -241,7 +285,7 @@
 	height: 200px;	
 	display: none;
 	position: absolute;
-	bottom: 100px;
+	bottom: 10px;
 }
 
 .invertedLogoHolder p {
@@ -268,8 +312,8 @@
 }
 
 .normalState .rightContainer {
-	width: 84.6%;
-    overflow:hidden;
+	width: calc(100% - 200px);
+    overflow-x:hidden;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
@@ -285,6 +329,15 @@
     transition: width .5s ease-in-out;	
 }
 
+.hideSideBar .rightContainer {
+	width: 100%!important;	
+    overflow-x:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
 .activeSideBar .leftTogglerHolder img,
 .hideSideBar2 .leftTogglerHolder img {
 	float: none;
@@ -294,13 +347,15 @@
 	display: none;
 }
 
-.hideSideBar .rightContainer {
-	width: 100%;	
-    overflow:hidden;
-    -webkit-transition: width .9s ease-in-out;
-    -moz-transition: width .9s ease-in-out;
-    -o-transition: width .9s ease-in-out;
-    transition: width .9s ease-in-out;	
+
+
+.hideSideBarWithNotifBar .rightContainer{
+	width: calc(100% - 250px)!important;	
+    overflow-x:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
 }
 
 .activeSideBar .leftContainer {
@@ -313,12 +368,22 @@
 }
 
 .activeSideBar .rightContainer {
-	width: 96%;	
-    overflow:hidden;
+	width: calc(100% - 50px);	
+    overflow-x:hidden;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out;	
+}
+
+.activeSideBarWithNotifBar .rightContainer{
+	width: calc(100% - 300px)!important;	
+    overflow-x:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+
 }
 
 .activeSideBar .invertedLogoHolder {
@@ -351,8 +416,8 @@
 }
 
 .hideSideBar2 .rightContainer {
-	width: 100%;	
-    overflow:hidden;
+	width: 100%!important;	
+    overflow-x:hidden;
     -webkit-transition: width .9s ease-in-out;
     -moz-transition: width .9s ease-in-out;
     -o-transition: width .9s ease-in-out;
@@ -365,14 +430,14 @@
 
 .notificationBarContainer{
 	float:left;
-	background:#4D4D4D;
+	background:#1D2D37;
 	/*width: 200px;*/
 	width: 0px;
 	height: 100%;
 }
 
 .activeNotificationBar{
-	width: 200px;
+	width: 250px;
     overflow:hidden;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
@@ -389,25 +454,13 @@
     transition: width .5s ease-in-out;	
 }
 
-
 .adjustWidthNotifNormalState{
-	width: calc(100% - 400px)!important;
+	width: calc(100% - 450px)!important;
     overflow:hidden;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out;	
-
-}
-
-.adjustWidthNotifActiveSidebar{
-	width: calc(100% - 250px)!important;
-    overflow:hidden;
-    -webkit-transition: width .5s ease-in-out;
-    -moz-transition: width .5s ease-in-out;
-    -o-transition: width .5s ease-in-out;
-    transition: width .5s ease-in-out;	
-
 }
 
 .adjustWidthNotifNormalStateHide{
@@ -417,15 +470,122 @@
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out;	
-
 }
 
-.adjustWidthNotifActiveSidebarHide{
-	width: calc(100% - 50px)!important;
+.adjustWidthNotifActiveSidebar{
+	width: calc(100% - 300px)!important;
     overflow:hidden;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out;	
 
+}
+
+.adjustWidthNotifActiveSidebarHide .rightContainer{
+	width: calc(100% - 250px)!important;
+    overflow-x:hidden;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;	
+}
+
+.tabsHolder{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	padding: 0 0 0 185px;
+	vertical-align: bottom;
+	/*background: #232;*/
+	border-bottom: 5px #CCCCCC solid;
+	overflow: visible;
+}
+
+ul.tabs{
+	overflow: visible;
+	position: relative;
+	height: 55px;
+	/*margin: 0 0 0 60px;*/
+}
+
+ul.tabs>li{
+	margin: 20px 0px 0 0;
+	width: 120px;
+	text-align: center;
+	top: 14px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+ul.tabs>li.activeTab{
+	border-bottom: 5px solid #81BC3C;
+}
+
+.indicator{
+	position: absolute;
+	display: none;
+	width: 120px;
+	height: 5px;
+	background:#9EE748;
+	top: 40px;
+	left: 0px;
+}
+
+.contentContainer{
+	position: relative;
+	padding: 10px;
+	/*top: 84px;*/
+}
+
+.tabsContainer{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 86px;
+	/*top:90px;*/
+	/*background: #444;*/
+}
+
+.tabsContainer.sticky{
+	position: fixed;
+	top:0;
+	background:white;
+	z-index: 2;
+	height: 55px;
+
+	-webkit-transition: height 0.4s ease-in-out;
+	-moz-transition: height 0.4s ease-in-out;
+    -o-transition: height 0.4s ease-in-out;
+    transition: height 0.4s ease-in-out;
+}
+
+.tabsHolder.sticky{
+	top:0;
+
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.pageTitleContainer{
+	position: relative;
+	width: 100%;
+	height: 43px;
+}
+
+.titleContainer{
+	float: left;
+	height: 100%;
+	padding: 5px 0 0 27px;
+	font-size: 22px;
+	color:#3B4854;
+}
+
+.newwJobContainer{
+	float:right;
+	height: 100%;
+	padding: 10px 27px 0 0;
+	color:#9A9A9A;
 }
