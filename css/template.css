@@ -542,7 +542,7 @@ ul.tabs>li.activeTab{
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 86px;
+	height: 45px;
 	/*top:90px;*/
 	/*background: #444;*/
 }
@@ -588,4 +588,11 @@ ul.tabs>li.activeTab{
 	height: 100%;
 	padding: 10px 27px 0 0;
 	color:#9A9A9A;
+}
+
+.sortSearchContainer{
+	position: relative;
+	width: 100%;
+	height: 55px;
+	background:#F2F2F2;
 }
